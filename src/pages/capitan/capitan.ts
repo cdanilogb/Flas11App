@@ -15,11 +15,25 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class CapitanPage {
 
+    numero1;
+    numero2;
+    resultado;
+
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad CapitanPage');
   }
+  
+    suma(){
+        
+        this.resultado = "La sumas de " + this.numero1 + " + " + 
+            this.numero2 + " = " + (parseFloat(this.numero1) + parseFloat(this.numero2)); 
+        
+    }
+    
+
 
 }
