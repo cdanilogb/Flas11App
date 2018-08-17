@@ -1,0 +1,60 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            Mi aplicacion
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content >
+    <ion-card>
+        <img src="../assets/icon/desert.svg" height="200"/>
+        <ion-card-content>
+            <ion-card-title>
+                Hola mundo!    
+            </ion-card-title>
+            <ion-list>
+                <ion-item>
+                    <ion-thumbnail item-start>
+                        <img src="../assets/icon/snorlax.svg">
+                    </ion-thumbnail>
+                    <h2 id="diferente">Snorlax </h2>
+                    <p>Piso 1 • </p>
+                    <button ion-button clear item-end (click)="irSnorlax()" >Ver</button>
+                </ion-item>
+                <ion-item>
+                    <ion-thumbnail item-start>
+                        <img src="../assets/icon/captain-america.svg">
+                    </ion-thumbnail>
+                    <h2 class="color">Captain america</h2>
+                    <p>Piso h • </p>
+                    <button ion-button clear item-end (click)="irCapitan()">Ver</button>
+                </ion-item>
+                <ion-item>
+                    <ion-thumbnail item-start>
+                        <img src="../assets/icon/money-bag.svg">
+                    </ion-thumbnail>
+                    <h2>Money 3</h2>
+                    <p>Piso 100 • 3</p>
+                    <button ion-button clear item-end (click)="irMoney()">Ver</button>
+                </ion-item>
+                <ion-item>
+                    <ion-thumbnail item-start>
+                        <img src="../assets/icon/android.svg">
+                    </ion-thumbnail>
+                    <h2>Android</h2>
+                    <p> • 3</p>
+                    <button ion-button clear item-end (click)="irAndroid()">Ver</button>
+                </ion-item>
+            </ion-list>
+        </ion-card-content>
+    </ion-card>
+</ion-content>
+
+<ion-footer>
+    <ion-navbar>
+        <ion-title>
+            2018
+        </ion-title>
+    </ion-navbar>
+</ion-footer>
