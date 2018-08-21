@@ -6,13 +6,86 @@
 -->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>android</ion-title>
-  </ion-navbar>
+    <ion-navbar>
+        <ion-title>android</ion-title>
+    </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
+<ion-content >
 
+    <ion-item>
+
+        <ion-label>Prueba de checkbox</ion-label>
+
+        <ion-checkbox color="dark" checked="false"></ion-checkbox>
+    </ion-item>
+    <ion-item>
+        <ion-label>Chechbox deshabilitado</ion-label>
+        <ion-checkbox disabled="true"></ion-checkbox>
+    </ion-item>
+    <ion-item>
+
+        <ion-label>Prueba de checkbox 2</ion-label>
+
+        <ion-checkbox color="gray" checked="false"></ion-checkbox>
+    </ion-item>
+    
+    <ion-icon name="heart" ></ion-icon> 
+
+      <ion-list radio-group>
+  <ion-list-header>
+      <p>TITULO</p>
+  </ion-list-header>
+
+  <ion-item>
+    <ion-label>Go</ion-label>
+    <ion-radio checked="true" value="go"></ion-radio>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Rust</ion-label>
+    <ion-radio value="rust" disabled="true"></ion-radio>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Python</ion-label>
+    <ion-radio value="python" ></ion-radio>
+  </ion-item>
+</ion-list>
+    
+   <div padding>
+  <ion-segment [(ngModel)]="pet">
+    <ion-segment-button value="kittens">
+      Kittens
+    </ion-segment-button>
+    <ion-segment-button value="puppies">
+      Puppies
+    </ion-segment-button>
+  </ion-segment>
+</div>
+
+<div [ngSwitch]="pet">
+  <ion-list *ngSwitchCase="'puppies'">
+    <ion-item>
+      <ion-thumbnail item-start>
+         <img src="../assets/icon/snorlax.svg">
+      </ion-thumbnail>
+      <h2>Snorlax</h2>
+    </ion-item>
+    ...
+  </ion-list>
+
+  <ion-list *ngSwitchCase="'kittens'">
+    <ion-item>
+      <ion-thumbnail item-start>
+         <img src="../assets/icon/baile.svg">
+      </ion-thumbnail>
+      <h2>Baile</h2>
+    </ion-item>
+    ...
+  </ion-list>
+</div>
+    
 </ion-content>
