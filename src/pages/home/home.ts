@@ -4,6 +4,7 @@ import {SnorlaxPage} from '../snorlax/snorlax';
 import {CapitanPage} from '../capitan/capitan';
 import {MoneyPage} from '../money/money';
 import {AndroidPage} from '../android/android';
+import {ListpersonPage} from '../listperson/listperson';
 
 @Component({
   selector: 'page-home',
@@ -35,4 +36,11 @@ irAndroid(){
     
     this.navCtrl.push(AndroidPage);
 }
+
+irListperson(){
+    
+    this.navCtrl.push(ListpersonPage);
+}
+
+
 }

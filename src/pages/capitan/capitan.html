@@ -69,8 +69,8 @@
                 <ion-item *ngIf="Estado">
                     <button ion-button (click)="cambio(true)">Divisibles</button>
                     <button ion-button (click)="cambio(false)">No Divisibles</button>
-                    
-                    
+
+
                 </ion-item>
                 <ion-item *ngFor="let piso of tablam">
                     {{piso.num}} * {{piso.ind}} = {{piso.res}}

@@ -21,7 +21,7 @@ export class CapitanPage {
     resultado;
     tablam;
     Estado;
-    ctrl:boolean=true;
+    ctrl: boolean = true;
 
 
     constructor(public navCtrl: NavController, public navParams: NavParams) {
@@ -45,7 +45,7 @@ export class CapitanPage {
 
     }
 
-     multiplicacion() {
+    multiplicacion() {
 
         this.resultado = "La multi de " + this.numero1 + " * " +
             this.numero2 + " = " + (parseFloat(this.numero1) * parseFloat(this.numero2));
@@ -58,24 +58,24 @@ export class CapitanPage {
             this.numero2 + " = " + (parseFloat(this.numero1) / parseFloat(this.numero2));
 
     }
-    
-    tabla(){
-        this.Estado=true;
+
+    tabla() {
+        this.Estado = true;
         this.tablam = Array();
-        for (let i = 1; i <= this.numero2; i++){
-            if (((this.numero1 * i) % this.numero3 == 0) == this.ctrl){
-            this.tablam.push({num: this.numero1, ind: i, res: (this.numero1 * i)});
-            
+        for (let i = 1; i <= this.numero2; i++) {
+            if (((this.numero1 * i) % this.numero3 == 0) == this.ctrl) {
+                this.tablam.push({num: this.numero1, ind: i, res: (this.numero1 * i)});
+
+            }
         }
-        }
-        
-        
-        
+
+
+
     }
-    cambio(valor){
-        this.ctrl=valor;
+    cambio(valor) {
+        this.ctrl = valor;
         this.tabla();
-        
-        
+
+
     }
 }
