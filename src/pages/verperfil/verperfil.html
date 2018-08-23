@@ -1,0 +1,41 @@
+<!--
+  Generated template for the VerperfilPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>verperfil</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+
+    <ion-card>
+  <img src="{{persona.picture.large}}">
+  <ion-card-content>
+    <ion-card-title>
+      <h1>{{persona.name.first }} {{ persona.name.last}} </h1>
+      </ion-card-title>
+    
+      <p>{{ persona.gender }}</p>
+                        <h3><b>E-mail </b>{{persona.email}}</h3>
+                        <h3><b>Edad </b> {{persona.dob.age}}</h3>
+                        <h3><b>Ciudad </b>{{ persona.location.city}}</h3>
+                        <h3><b>Codigo postal </b>{{ persona.location.postcode}}</h3>
+                        <h3><b>Telefono </b>{{persona.phone}}</h3>
+        
+    
+  </ion-card-content>
+</ion-card>
+    
+    
+    
+    
+    
+    
+</ion-content>

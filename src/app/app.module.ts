@@ -12,6 +12,7 @@ import {MoneyPage} from '../pages/money/money';
 import {AndroidPage} from '../pages/android/android';
 import {ListpersonPage} from '../pages/listperson/listperson';
 import {HttpClientModule} from '@angular/common/http';
+import {VerperfilPage} from '../pages/verperfil/verperfil';
 
 import { ConectarProvider } from '../providers/conectar/conectar';
 
@@ -23,7 +24,8 @@ import { ConectarProvider } from '../providers/conectar/conectar';
     CapitanPage,
     MoneyPage,
     AndroidPage,
-    ListpersonPage
+    ListpersonPage,
+    VerperfilPage
   ],
   imports: [
     BrowserModule,
@@ -39,7 +41,8 @@ import { ConectarProvider } from '../providers/conectar/conectar';
     CapitanPage,
     MoneyPage,
     AndroidPage,
-    ListpersonPage
+    ListpersonPage,
+    VerperfilPage
   ],
   providers: [
     StatusBar,

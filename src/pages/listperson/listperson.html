@@ -22,35 +22,60 @@
         </ion-card-header>
         <ion-card-content>
             <ion-list>
-            <ion-item>
-                <ion-label floating>Ingrese numero de personas</ion-label>
-                <ion-input type="number" [(ngModel)] ="numero"></ion-input>
-            </ion-item>
-            <ion-item>
-                <button ion-button full color="dark" round (click)="consultar()" >Traer</button>
-                
-                
-              
-                
-            </ion-item>
+                <ion-item>
+                    <ion-label floating>Ingrese numero de personas</ion-label>
+                    <ion-input type="number" [(ngModel)] ="numero"></ion-input>
+                </ion-item>
+                <ion-item>
+                    <button ion-button full color="dark" round (click)="consultar()" >Traer</button>
+
+
+
+
+                </ion-item>
             </ion-list>
-            
+
+
+
+
+
+            <ion-list>
+                <div  *ngFor="let persona of edificio">
+                    <ion-item *ngIf ="persona.gender == 'female' && persona.dob.age > 20 ">
+
+
+                        <ion-avatar item-start>
+                            <img src="{{ persona.picture.thumbnail }}">
+                        </ion-avatar>
+                        <h1>{{persona.name.first}} </h1>
+                        <p>{{ persona.gender }}</p>
+                        <h3>{{persona.email}}</h3>
+                        <h3><b>Edad</b> {{persona.dob.age}}</h3>
+                        <ion-note item-end>{{ persona.location.city}}</ion-note>
+                        <button ion-button clear item-end (click)="irPerfil(persona)" >Ver</button>
+
+                    </ion-item>
+                </div> 
+            </ion-list>
+
+
+
         </ion-card-content>
 
     </ion-card>
-    
- 
-    
-   
+
+
+
+
 
 
 </ion-content>
 <ion-footer>
     <ion-navbar>
-         <button  class="color" (click)="irHome()" >
-            
+        <button  class="color" (click)="irHome()" >
+
             <img src="../assets/icon/house.svg" height="50" >
-            
-            </button>
+
+        </button>
     </ion-navbar>
 </ion-footer>

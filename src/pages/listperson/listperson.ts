@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import {ConectarProvider} from '../../providers/conectar/conectar';
+import {VerperfilPage} from '../verperfil/verperfil';
 
 /**
  * Generated class for the ListpersonPage page.
@@ -35,10 +36,24 @@ export class ListpersonPage {
       let estado = this.acceso.traerListPerson(this.numero);
       estado.subscribe(data=>{
        
-          console.log(data);
+          this.ejecutar(data);
       },err=>{
           console.log(err);
       });
+  }
+  
+  irPerfil(persona){
+      
+      this.navCtrl.push(VerperfilPage,{Data:persona});
+      
+  }
+  
+  edificio;
+  ejecutar(laRespuestaDelServidor) {
+      
+      this.edificio = laRespuestaDelServidor.results;
+      
+      
   }
 
 }
