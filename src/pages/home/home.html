@@ -14,6 +14,14 @@
                 Hola mundo!    
             </ion-card-title>
             <ion-list>
+                    <ion-item>
+                    <ion-thumbnail item-start>
+                        <img src="../assets/icon/resume.svg">
+                    </ion-thumbnail>
+                    <h2>Registro </h2>
+                    <h3>Registro de personas </h3>
+                    <button ion-button clear item-end (click)="irRegper()" >Ver</button>
+                </ion-item>
                 <ion-item>
                     <ion-thumbnail item-start>
                         <img src="../assets/icon/person.svg">
@@ -21,6 +29,15 @@
                     <h2>Personas </h2>
                     <h3>Lista de personas </h3>
                     <button ion-button clear item-end (click)="irListperson()" >Ver</button>
+                </ion-item>
+                <ion-item>
+                    <ion-thumbnail item-start>
+                        <button class="color2" (click)="irSiFunciona()"  >
+
+                            <img src="../assets/icon/json-file.svg" height="50" width="50" >
+
+                        </button>
+                    </ion-thumbnail>
                 </ion-item>
                 <ion-item>
                     <ion-thumbnail item-start>

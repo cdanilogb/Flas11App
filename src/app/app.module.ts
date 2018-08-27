@@ -13,6 +13,10 @@ import {AndroidPage} from '../pages/android/android';
 import {ListpersonPage} from '../pages/listperson/listperson';
 import {HttpClientModule} from '@angular/common/http';
 import {VerperfilPage} from '../pages/verperfil/verperfil';
+import {SifuncionaPage} from '../pages/sifunciona/sifunciona';
+import {SeparadoPage} from '../pages/separado/separado';
+import {ObjetoPage} from '../pages/objeto/objeto';
+import {RegperPage} from '../pages/regper/regper';
 
 import { ConectarProvider } from '../providers/conectar/conectar';
 
@@ -25,7 +29,11 @@ import { ConectarProvider } from '../providers/conectar/conectar';
     MoneyPage,
     AndroidPage,
     ListpersonPage,
-    VerperfilPage
+    VerperfilPage,
+    SifuncionaPage,
+    SeparadoPage,
+    ObjetoPage,
+    RegperPage
   ],
   imports: [
     BrowserModule,
@@ -42,7 +50,11 @@ import { ConectarProvider } from '../providers/conectar/conectar';
     MoneyPage,
     AndroidPage,
     ListpersonPage,
-    VerperfilPage
+    VerperfilPage,
+    SifuncionaPage,
+      SeparadoPage,
+      ObjetoPage,
+      RegperPage
   ],
   providers: [
     StatusBar,

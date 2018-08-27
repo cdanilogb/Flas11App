@@ -5,6 +5,8 @@ import {CapitanPage} from '../capitan/capitan';
 import {MoneyPage} from '../money/money';
 import {AndroidPage} from '../android/android';
 import {ListpersonPage} from '../listperson/listperson';
+import {SifuncionaPage} from '../sifunciona/sifunciona';
+import {RegperPage} from '../regper/regper';
 
 @Component({
   selector: 'page-home',
@@ -41,6 +43,18 @@ irListperson(){
     
     this.navCtrl.push(ListpersonPage);
 }
+irSiFunciona(){
+    
+    
+    this.navCtrl.push(SifuncionaPage);
+}
+
+irRegper(){
+    
+    
+    this.navCtrl.push(RegperPage);
+}
+
 
 
 }
