@@ -20,5 +20,18 @@ traerListPerson(numero){
     
 }
 
+options = {
+    headers: {
+        
+        'Content-Type': 'application/x-www-form-urlencoded'
+            }
+    
+};
+
+    enviarAlServidor (persona){
+        
+        
+    }
+
 
 }

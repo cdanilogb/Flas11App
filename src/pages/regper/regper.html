@@ -19,6 +19,11 @@
         <img src="../assets/icon/usuario.svg" height="200"/>
         <ion-card-content>
             <ion-list>
+                <ion-item>
+                    <ion-label floating>Fecha de nacimiento</ion-label>
+                    <ion-datetime dysplayFormat="mm-dd-yyyy" pikerFormat="YYY-DD-MM" ></ion-datetime>
+
+                </ion-item>
                 <form [formGroup]="RegPersona" (ngSubmit)="regPer()" novalidate>
                     <ion-item>
                         <ion-label floating>Tipo de documento</ion-label>
