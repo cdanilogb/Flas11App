@@ -17,6 +17,7 @@ import {SifuncionaPage} from '../pages/sifunciona/sifunciona';
 import {SeparadoPage} from '../pages/separado/separado';
 import {ObjetoPage} from '../pages/objeto/objeto';
 import {RegperPage} from '../pages/regper/regper';
+import {BusperPage} from '../pages/busper/busper';
 
 import { ConectarProvider } from '../providers/conectar/conectar';
 
@@ -33,7 +34,8 @@ import { ConectarProvider } from '../providers/conectar/conectar';
     SifuncionaPage,
     SeparadoPage,
     ObjetoPage,
-    RegperPage
+    RegperPage,
+    BusperPage
   ],
   imports: [
     BrowserModule,
@@ -54,7 +56,8 @@ import { ConectarProvider } from '../providers/conectar/conectar';
     SifuncionaPage,
       SeparadoPage,
       ObjetoPage,
-      RegperPage
+      RegperPage,
+      BusperPage
   ],
   providers: [
     StatusBar,

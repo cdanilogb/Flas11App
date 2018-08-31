@@ -7,6 +7,7 @@ import {AndroidPage} from '../android/android';
 import {ListpersonPage} from '../listperson/listperson';
 import {SifuncionaPage} from '../sifunciona/sifunciona';
 import {RegperPage} from '../regper/regper';
+import {BusperPage} from '../busper/busper';
 
 @Component({
   selector: 'page-home',
@@ -53,8 +54,12 @@ irRegper(){
     
     
     this.navCtrl.push(RegperPage);
-}
-
+} 
+irBusper(){
+    
+    
+    this.navCtrl.push(BusperPage);
+} 
 
 
 }

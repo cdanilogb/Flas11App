@@ -54,14 +54,15 @@ ion-card{
 }
 ion-content{
     
-    background: rgba(98,125,77,1);
-background: -moz-radial-gradient(center, ellipse cover, rgba(98,125,77,1) 4%, rgba(98,125,77,1) 50%, rgba(31,59,8,1) 68%, rgba(31,59,8,1) 100%);
-background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(4%, rgba(98,125,77,1)), color-stop(50%, rgba(98,125,77,1)), color-stop(68%, rgba(31,59,8,1)), color-stop(100%, rgba(31,59,8,1)));
-background: -webkit-radial-gradient(center, ellipse cover, rgba(98,125,77,1) 4%, rgba(98,125,77,1) 50%, rgba(31,59,8,1) 68%, rgba(31,59,8,1) 100%);
-background: -o-radial-gradient(center, ellipse cover, rgba(98,125,77,1) 4%, rgba(98,125,77,1) 50%, rgba(31,59,8,1) 68%, rgba(31,59,8,1) 100%);
-background: -ms-radial-gradient(center, ellipse cover, rgba(98,125,77,1) 4%, rgba(98,125,77,1) 50%, rgba(31,59,8,1) 68%, rgba(31,59,8,1) 100%);
-background: radial-gradient(ellipse at center, rgba(98,125,77,1) 4%, rgba(98,125,77,1) 50%, rgba(31,59,8,1) 68%, rgba(31,59,8,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#627d4d', endColorstr='#1f3b08', GradientType=1 )
+ background: rgba(5,65,130,1);
+background: -moz-radial-gradient(center, ellipse cover, rgba(5,65,130,1) 0%, rgba(5,65,130,1) 1%, rgba(41,23,66,1) 52%, rgba(41,23,66,1) 100%);
+background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(5,65,130,1)), color-stop(1%, rgba(5,65,130,1)), color-stop(52%, rgba(41,23,66,1)), color-stop(100%, rgba(41,23,66,1)));
+background: -webkit-radial-gradient(center, ellipse cover, rgba(5,65,130,1) 0%, rgba(5,65,130,1) 1%, rgba(41,23,66,1) 52%, rgba(41,23,66,1) 100%);
+background: -o-radial-gradient(center, ellipse cover, rgba(5,65,130,1) 0%, rgba(5,65,130,1) 1%, rgba(41,23,66,1) 52%, rgba(41,23,66,1) 100%);
+background: -ms-radial-gradient(center, ellipse cover, rgba(5,65,130,1) 0%, rgba(5,65,130,1) 1%, rgba(41,23,66,1) 52%, rgba(41,23,66,1) 100%);
+background: radial-gradient(ellipse at center, rgba(5,65,130,1) 0%, rgba(5,65,130,1) 1%, rgba(41,23,66,1) 52%, rgba(41,23,66,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#054182', endColorstr='#291742', GradientType=1 );
+
     
 }
 
@@ -82,4 +83,11 @@ h3 {
     font-family: 'ArnoiaDisplay';
     color:#191717!important;
     font-weight: bold;
+}
+
+ion-label {
+    
+    color:#CB9A5A !important;
+    
+    
 }
