@@ -24,13 +24,13 @@
             <ion-list>
                 <ion-item>
                     <ion-label ion-text floating>Opciones de filtro</ion-label>
-                    <ion-select [(ngModel)]="filtro" >
+                    <ion-select [(ngModel)]="filtro" (ionChange)="verifique()" >
                         <ion-option value="1">Todos</ion-option>
                         <ion-option value="CC">CC</ion-option>
                         <ion-option value="nombre">Nombre</ion-option>
                         <ion-option value="apellido">Apellido</ion-option>
                         <ion-option value="email">Email</ion-option>
-                        <ion-option value="correo">Correo</ion-option>
+                        <ion-option value="telefono">Telefono</ion-option>
                     </ion-select>
                 </ion-item>
 

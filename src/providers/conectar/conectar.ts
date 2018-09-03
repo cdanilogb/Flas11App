@@ -19,7 +19,7 @@ export class ConectarProvider {
     }
 
     options = {
-        headers: {
+        headers: { 
             'Content-Type': 'application/x-www-form-urlencoded'
         }
     };
@@ -29,7 +29,11 @@ export class ConectarProvider {
         return this.http.post("http://192.168.0.225:8081/flas011/controller/registro.php", JSON.stringify(persona), this.options);
 
     }
-
+    
+    servidorBuscar (criterio){
+        return this.http.post("http://192.168.0.225:8081/flas011/controller/buscar.php", JSON.stringify(criterio), this.options);
+        
+    }
 
 
 }
