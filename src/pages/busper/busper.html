@@ -42,6 +42,33 @@
                     <button ion-button style="float: rigth;" (click)="buscar()">Buscar</button>
                 </ion-item>
             </ion-list>
+            
+              <ion-list>
+                  <ion-card>
+                      <ion-card-header>
+                          Los resultados son:
+                      </ion-card-header>
+                <div  *ngFor="let persona of edificio">
+                    <ion-item >
+
+
+                        <ion-avatar item-start>
+                            <img src="http://192.168.0.225:8081/flas011/img/{{persona.foto}}">
+                        </ion-avatar>
+                        <h1>{{persona.nombre}}  </h1>
+                        <h1>{{persona.apellido}}</h1>
+                        <p>{{ persona.cc }}</p>
+                        <h3>{{persona.email}}</h3>
+                        
+
+                         <ion-note item-end>{{ persona.telefono}}</ion-note>
+                        <button ion-button clear item-end (click)="verPerfil(persona)" >Ver</button>
+                        
+                    </ion-item>
+                </div> 
+                      </ion-card>
+            </ion-list>
+
         </ion-card-content>
 
     </ion-card>

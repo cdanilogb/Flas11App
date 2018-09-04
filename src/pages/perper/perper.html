@@ -1,0 +1,47 @@
+<!--
+  Generated template for the PerperPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Perfil de {{persona.nombre}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+ion-card-content
+<ion-content>
+
+    <ion-card>
+  <img src="http://192.168.0.225:8081/flas011/img/{{persona.foto}}">
+  <div class="cam" (click)="cam()">Cambiar Foto</div>
+  <div class="cam" (click)="sd()">Elegir foto</div>
+  <ion-card-content>
+    <ion-card-title style="text-transform: uppercase">
+      <h1>{{persona.nombre }} {{ persona.apellido}} </h1>
+      </ion-card-title>
+    
+      <p><b>Numero de CC: </b>{{ persona.cc }}</p>
+                        <h3><b>E-mail </b>{{persona.email}}</h3>
+                        <h3><b>Telefono </b> {{persona.telefono}}</h3>
+                        <h3><b>Identificacion </b>{{ persona.id}}</h3>
+                        <h3><b>Fecha de nacimiento </b>{{ persona.fechaNa}}</h3>
+                        
+        
+    
+  </ion-card-content>
+  
+  
+ {{imageURI}} 
+ 
+</ion-card>
+    
+    
+    
+    
+    
+    
+</ion-content>

@@ -3,6 +3,7 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
+import { Camera } from '@ionic-native/camera';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -18,6 +19,7 @@ import {SeparadoPage} from '../pages/separado/separado';
 import {ObjetoPage} from '../pages/objeto/objeto';
 import {RegperPage} from '../pages/regper/regper';
 import {BusperPage} from '../pages/busper/busper';
+import {PerperPage} from '../pages/perper/perper';
 
 import { ConectarProvider } from '../providers/conectar/conectar';
 
@@ -35,7 +37,8 @@ import { ConectarProvider } from '../providers/conectar/conectar';
     SeparadoPage,
     ObjetoPage,
     RegperPage,
-    BusperPage
+    BusperPage,
+    PerperPage
   ],
   imports: [
     BrowserModule,
@@ -57,13 +60,15 @@ import { ConectarProvider } from '../providers/conectar/conectar';
       SeparadoPage,
       ObjetoPage,
       RegperPage,
-      BusperPage
+      BusperPage,
+      PerperPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    ConectarProvider
+    ConectarProvider,
+    Camera
   ]
 })
 export class AppModule {}

@@ -39,7 +39,7 @@ export class ListpersonPage {
           this.ejecutar(data);
       },err=>{
           console.log(err);
-      });
+      });   
   }
   
   irPerfil(persona){

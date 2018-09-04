@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { ToastController } from 'ionic-angular';
 import {ConectarProvider} from '../../providers/conectar/conectar';
+import {PerperPage} from '../perper/perper';
 
 /**
  * Generated class for the BusperPage page.
@@ -48,7 +49,10 @@ criterio="";
           let busqueda = {filtro: this.filtro, criterio: this.criterio };
           let estado = this.conecta.servidorBuscar(busqueda);
           estado.subscribe(data=>{
-              console.log(data);
+           console.log(data);
+              //let datos :any=data;
+              //this.edificio= datos.result;
+           this.cargarVista(data);
           },err=>{
               console.log(err);
           });
@@ -59,4 +63,20 @@ criterio="";
         this.criterio="";
         this.presentToast("Cambio el criterio");
     }
+    
+    edificio;
+
+ cargarVista(data) {
+        this.edificio = data.result;
+    }
+
+    verPerfil(persona){
+        
+        this.navCtrl.push(PerperPage,{Data:persona});
+    }
+    
+  
+    
+    
+    
 }
