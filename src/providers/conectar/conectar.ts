@@ -34,6 +34,11 @@ export class ConectarProvider {
         return this.http.post("http://192.168.0.225:8081/flas011/controller/buscar.php", JSON.stringify(criterio), this.options);
         
     }
-
-
+    servidorActualizar(newPersana){
+        return this.http.post("http://192.168.0.225:8081/flas011/controller/actualizarPersona.php", JSON.stringify(newPersana), this.options);
+    }
+         servidorDelete(Persona) {
+        let codigo = {id: Persona.id}
+        return this.http.post("http://192.168.0.225:8081/flas011/controller/EliminarPersona.php", JSON.stringify(codigo), this.options);
+    }                      
 }

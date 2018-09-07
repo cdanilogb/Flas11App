@@ -4,6 +4,8 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { Camera } from '@ionic-native/camera';
+import { FileTransfer, FileUploadOptions, FileTransferObject } from '@ionic-native/file-transfer';
+import { File } from '@ionic-native/file';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -20,6 +22,7 @@ import {ObjetoPage} from '../pages/objeto/objeto';
 import {RegperPage} from '../pages/regper/regper';
 import {BusperPage} from '../pages/busper/busper';
 import {PerperPage} from '../pages/perper/perper';
+import {ActuperPage} from '../pages/actuper/actuper';
 
 import { ConectarProvider } from '../providers/conectar/conectar';
 
@@ -38,7 +41,8 @@ import { ConectarProvider } from '../providers/conectar/conectar';
     ObjetoPage,
     RegperPage,
     BusperPage,
-    PerperPage
+    PerperPage,
+    ActuperPage
   ],
   imports: [
     BrowserModule,
@@ -61,14 +65,19 @@ import { ConectarProvider } from '../providers/conectar/conectar';
       ObjetoPage,
       RegperPage,
       BusperPage,
-      PerperPage
+      PerperPage,
+      ActuperPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     ConectarProvider,
-    Camera
+    Camera,
+    FileTransfer,
+  // FileUploadOptions,
+  FileTransferObject,
+  File
   ]
 })
 export class AppModule {}

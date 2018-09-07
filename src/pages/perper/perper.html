@@ -30,15 +30,22 @@ ion-card-content
                         <h3><b>Identificacion </b>{{ persona.id}}</h3>
                         <h3><b>Fecha de nacimiento </b>{{ persona.fechaNa}}</h3>
                         
+                        <button ion-button (click)="irActuper(persona)"> Actualizar</button>
+                        <button style="float:right;" color="danger" ion-button (click)="showConfirm()" >Eliminar</button>
         
     
   </ion-card-content>
   
   
- {{imageURI}} 
+
  
 </ion-card>
-    
+
+     <ion-card *ngIf="imageURI">
+        <h2>Informe:{{info}}</h2>
+        <img src="{{imageURI}}"  alt="Ionic File" width="300" />
+        <button ion-button (click)="cargarFoto()">Cargar Foto</button>
+    </ion-card >
     
     
     

@@ -1,0 +1,106 @@
+<!--
+  Generated template for the ActuperPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>actuper</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content >
+    
+     <ion-list>
+                
+                <form [formGroup]="RegPersona" (ngSubmit)="ActualizarPer()" novalidate>
+                    
+                    <ion-item>
+                    <ion-label floating>Fecha de nacimiento</ion-label>
+                    <ion-datetime formControlName="fecNac" dysplayFormat="mm-dd-yyyy" pikerFormat="YYY-DD-MM" ></ion-datetime>
+
+                </ion-item>
+                    <ion-item>
+                        <ion-label floating>Tipo de documento</ion-label>
+                        <ion-select formControlName="tipo">
+                            <ion-option value="1">Cedula</ion-option>
+                            <ion-option value="2">Pasaporte</ion-option>
+                            <ion-option value="3">Tarjeta de identidad</ion-option>
+                            <ion-option value="4">Registro civil</ion-option>
+                            <ion-option value="5">otros</ion-option>
+                        </ion-select>
+
+                    </ion-item>
+                    <ion-item *ngIf="RegPersona.get('tipo').errors && RegPersona.get('tipo').dirty"> 
+                    <p color="danger" *ngIf="RegPersona.get('tipo').hasError('required')">El campo es requerido</p>
+                        </ion-item>
+                    <ion-item>
+                        
+                        <ion-label floating>Numero</ion-label>
+                        <ion-input formControlName="numero" type="text" ></ion-input>
+                    </ion-item>
+                    
+                    <ion-item *ngIf="RegPersona.get('numero').errors && RegPersona.get('numero').dirty"> 
+                    <p color="danger" *ngIf="RegPersona.get('numero').hasError('required')">El campo es requerido</p>
+                    <p color="danger" *ngIf="RegPersona.get('numero').hasError('pattern')">Ej: 123456, no debe llevar letras o comas</p>
+                    </ion-item>
+
+
+                    <ion-item>
+                        <ion-label floating>Nombre</ion-label>
+                        <ion-input formControlName="nombre" type="text" ></ion-input>
+                    </ion-item>
+                    
+                    <ion-item *ngIf="RegPersona.get('nombre').errors && RegPersona.get('nombre').dirty"> 
+                    <p color="danger" *ngIf="RegPersona.get('nombre').hasError('required')">El campo es requerido</p>
+                    <p color="danger" *ngIf="RegPersona.get('nombre').hasError('pattern')">Ej: Luis, no debe llevar numeros o comas</p>
+</ion-item>
+                    <ion-item>
+                        <ion-label floating>Apellido</ion-label>
+                        <ion-input formControlName="apellido" type="text"></ion-input>
+                    </ion-item>
+
+                     <ion-item *ngIf="RegPersona.get('apellido').errors && RegPersona.get('apellido').dirty"> 
+                    <p color="danger" *ngIf="RegPersona.get('apellido').hasError('required')">El campo es requerido</p>
+                    <p color="danger" *ngIf="RegPersona.get('apellido').hasError('pattern')">Ej: Garcia, no debe llevar numeros o comas</p>
+                    </ion-item>
+                    <ion-item>
+                        <ion-label floating>Telefono</ion-label>
+                        <ion-input formControlName="telefono" type="text"></ion-input>
+                    </ion-item>
+                    
+                     <ion-item *ngIf="RegPersona.get('telefono').errors && RegPersona.get('telefono').dirty"> 
+                    <p color="danger" *ngIf="RegPersona.get('telefono').hasError('required')">El campo es requerido</p>
+                    <p color="danger" *ngIf="RegPersona.get('telefono').hasError('pattern')">Ej: 7654689, no debe llevar letras o comas</p>
+                    </ion-item>
+                    
+                    <ion-item>
+                        <ion-label floating>Email</ion-label>
+                        <ion-input formControlName="email" type="text"></ion-input>
+                    </ion-item>
+                    
+                     <ion-item *ngIf="RegPersona.get('email').errors && RegPersona.get('email').dirty"> 
+                    <p color="danger" *ngIf="RegPersona.get('email').hasError('required')">El campo es requerido</p>
+                         <p color="danger" *ngIf="RegPersona.get('email').hasError('email')">Ej: 123@456.com</p>
+                  </ion-item>
+
+                    <br><br>
+                    <p> <button type="submit" ion-button [disabled]="!RegPersona.valid" >Actualuzar</button>
+                        <button type="reset" ion-button style="float: rigth;">limpiar</button></p>
+
+
+
+
+
+
+
+
+                </form>
+
+            </ion-list>
+
+</ion-content>
